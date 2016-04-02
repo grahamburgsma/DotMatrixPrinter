@@ -6,7 +6,7 @@
 public class DotPrinter {
 
     public DotPrinter() {
-        ImageProcessor imageProcessor = new ImageProcessor("parrot.jpg");
+        ImageProcessor imageProcessor = new ImageProcessor("test2.jpg");
         imageProcessor.cannyEdgeDetector();
         imageProcessor.imageToMatrix();
     }

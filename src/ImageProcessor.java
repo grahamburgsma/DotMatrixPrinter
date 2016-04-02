@@ -11,10 +11,14 @@ import java.io.IOException;
  * Name: Graham Burgsma
  * Created on 30 March, 2016
  */
+
 public class ImageProcessor {
 
-    BufferedImage originalImage, edgeImage;
+    private BufferedImage originalImage, edgeImage;
     private String imageName;
+
+    private static final int MAX_PRINT_WIDTH = 500;
+    private static final int PRINT_THESHOLD = 100;
 
     public ImageProcessor(String imageName) {
         this.imageName = imageName;
@@ -29,22 +33,20 @@ public class ImageProcessor {
     public void cannyEdgeDetector() {
         CannyEdgeDetector cannyEdgeDetector = new CannyEdgeDetector();
         cannyEdgeDetector.setSourceImage(originalImage);
-        cannyEdgeDetector.setLowThreshold(0.5f);
-        cannyEdgeDetector.setHighThreshold(1f);
         cannyEdgeDetector.process();
 
         edgeImage = cannyEdgeDetector.getEdgesImage();
     }
 
     public int[][] imageToMatrix() {
-        BufferedImage resizedImage = Scalr.resize(edgeImage, 500);
+        BufferedImage resizedImage = Scalr.resize(edgeImage, MAX_PRINT_WIDTH);
 
         int[][] imageMatrix = new int[resizedImage.getHeight()][resizedImage.getWidth()];
 
         for (int y = 0; y < resizedImage.getHeight(); y++) {
             for (int x = 0; x < resizedImage.getWidth(); x++) {
                 Color color = new Color(resizedImage.getRGB(x, y));
-                imageMatrix[y][x] = color.getRed() > 125 ? 1 : 0;
+                imageMatrix[y][x] = color.getRed() > PRINT_THESHOLD ? 1 : 0;
             }
         }
 

@@ -17,7 +17,7 @@ public class ImageProcessor {
     private BufferedImage originalImage, edgeImage;
     private String imageName;
 
-    private static final int MAX_PRINT_WIDTH = 500;
+    private static final int MAX_PRINT_WIDTH = 200;
     private static final int PRINT_THESHOLD = 100;
 
     public ImageProcessor(String imageName) {

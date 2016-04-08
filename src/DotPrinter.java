@@ -8,24 +8,64 @@ import lejos.util.Delay;
  */
 public class DotPrinter {
 
+    private int[][] printMatrix;
+
     public DotPrinter() {
 //        ImageProcessor imageProcessor = new ImageProcessor("parrot.jpg");
 //        imageProcessor.cannyEdgeDetector();
-//        imageProcessor.imageToMatrix();
+//        printMatrix = imageProcessor.imageToMatrix();
 
         LCD.drawString(" - Dot Matrix Printer - ", 0, 0);
         LCD.drawString("Press enter to start", 0, 0);
         Button.waitForAnyPress();
 
-        feedPaperIn();
+        setup();
 
         while(true){
             drawDot();
-            incrementPaperForward();
+            incrementPaperFeed();
         }
     }
 
-    public void drawDot(){
+    private void setup() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                feedPaperIn();
+            }
+        }).run();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                resetSlider();
+            }
+        }).run();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                resetPen();
+            }
+        }).run();
+    }
+
+    private void resetSlider() {
+        TouchSensor touch = new TouchSensor(SensorPort.S2);
+        while (!touch.isPressed()) {
+            Motor.B.backward();
+        }
+        Motor.B.stop();
+        Motor.B.resetTachoCount();
+    }
+
+    private void resetPen() {
+        Motor.C.setStallThreshold(50, 300);
+
+        while (!Motor.C.isStalled())
+            Motor.C.forward();
+        Motor.C.stop();
+    }
+
+    private void drawDot(){
         Motor.C.setSpeed(300);
 
         Motor.C.backward();
@@ -37,7 +77,7 @@ public class DotPrinter {
         Motor.C.stop();
     }
 
-    public void incrementPaperForward(){
+    private void incrementPaperFeed(){
         Motor.A.setSpeed(50);
         Motor.A.rotate(45,false);
     }

@@ -14,11 +14,10 @@ import java.io.IOException;
 
 public class ImageProcessor {
 
+    private static final int MAX_PRINT_WIDTH = 50;
+    private static final int PRINT_THESHOLD = 100;
     private BufferedImage originalImage, edgeImage;
     private String imageName;
-
-    private static final int MAX_PRINT_WIDTH = 200;
-    private static final int PRINT_THESHOLD = 100;
 
     public ImageProcessor(String imageName) {
         this.imageName = imageName;
@@ -56,7 +55,7 @@ public class ImageProcessor {
     }
 
     public void displayImage(BufferedImage image) {
-        File outputfile = new File("images/" + imageName.substring(0,imageName.length()-4) + "Print.jpg");
+        File outputfile = new File("images/" + imageName.substring(0, imageName.length() - 4) + "Print.jpg");
         try {
             ImageIO.write(image, "png", outputfile);
         } catch (IOException e) {

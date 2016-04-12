@@ -1,3 +1,0 @@
-nxjc DotPrinter.java
-nxjlink -o DotPrinter.nxj DotPrinter
-nxjupload -r DotPrinter.nxj

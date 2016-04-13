@@ -21,7 +21,7 @@ public class DotPrinterNXT {
         LCD.drawString("Dot Matrix Printer", 0, 0);
 
         try {
-            connectToPCExample();
+            readPrintMatrix();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -105,7 +105,7 @@ public class DotPrinterNXT {
     }
 
     private void printMatrix() {
-        int widthFactor = 10;
+        int widthFactor = 25;
 
         for (int[] y : printMatrix) {
             for (int i = 0; i < y.length; i++) {
@@ -115,6 +115,7 @@ public class DotPrinterNXT {
                 }
             }
             resetSlider();
+            resetPen();
             incrementPaperFeed();
         }
     }

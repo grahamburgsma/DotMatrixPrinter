@@ -1,9 +1,9 @@
-import org.imgscalr.Scalr;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -15,9 +15,10 @@ import java.io.IOException;
 public class ImageProcessor {
 
     private static final int MAX_PRINT_WIDTH = 50;
-    private static final int PRINT_THESHOLD = 100;
+    private static final int PRINT_THESHOLD = 5;
     private BufferedImage originalImage, edgeImage;
     private String imageName;
+    private int[][] printMatrix;
 
     public ImageProcessor(String imageName) {
         this.imageName = imageName;
@@ -38,7 +39,9 @@ public class ImageProcessor {
     }
 
     public int[][] imageToMatrix() {
-        BufferedImage resizedImage = Scalr.resize(edgeImage, MAX_PRINT_WIDTH);
+        Image image = edgeImage.getScaledInstance(MAX_PRINT_WIDTH, 37, Image.SCALE_AREA_AVERAGING);
+
+        BufferedImage resizedImage = toBufferedImage(image);
 
         int[][] imageMatrix = new int[resizedImage.getHeight()][resizedImage.getWidth()];
 
@@ -51,7 +54,45 @@ public class ImageProcessor {
 
         displayImage(resizedImage);
 
+        printMatrix = imageMatrix;
         return imageMatrix;
+    }
+
+    private BufferedImage toBufferedImage(Image img) {
+        if (img instanceof BufferedImage) {
+            return (BufferedImage) img;
+        }
+
+        // Create a buffered image with transparency
+        BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+
+        // Draw the image on to the buffered image
+        Graphics2D bGr = bimage.createGraphics();
+        bGr.drawImage(img, 0, 0, null);
+        bGr.dispose();
+
+        // Return the buffered image
+        return bimage;
+    }
+
+    public void saveMatrixToFile() {
+        System.out.println(printMatrix.length);
+        System.out.println(printMatrix[0].length);
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("matrix.txt")));
+
+            for (int y = 0; y < printMatrix.length; y++) {
+                for (int x = 0; x < printMatrix[0].length; x++) {
+                    writer.write(String.valueOf(printMatrix[y][x]));
+                    writer.write(',');
+                }
+                writer.write("\n");
+            }
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void displayImage(BufferedImage image) {

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_dotmatrixprinter" default="compile.module.dotmatrixprinter">
+    <dirname property="module.dotmatrixprinter.basedir" file="${ant.file.module_dotmatrixprinter}"/>
+
+    <property name="module.jdk.home.dotmatrixprinter" value="${project.jdk.home}"/>
+    <property name="module.jdk.bin.dotmatrixprinter" value="${project.jdk.bin}"/>
+    <property name="module.jdk.classpath.dotmatrixprinter" value="${project.jdk.classpath}"/>
+
+    <property name="compiler.args.dotmatrixprinter" value="-encoding UTF-8 -source 1.6 -target 1.6 ${compiler.args}"/>
+
+    <property name="dotmatrixprinter.output.dir"
+              value="${module.dotmatrixprinter.basedir}/out/production/DotMatrixPrinter"/>
+    <property name="dotmatrixprinter.testoutput.dir"
+              value="${module.dotmatrixprinter.basedir}/out/test/DotMatrixPrinter"/>
+
+    <path id="dotmatrixprinter.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="dotmatrixprinter.module.production.classpath">
+        <path refid="${module.jdk.classpath.dotmatrixprinter}"/>
+        <path refid="library.org.imgscalr:imgscalr-lib:4.2.classpath"/>
+        <path refid="library.pc.classpath"/>
+        <path refid="library.nxt.classpath"/>
+    </path>
+
+    <path id="dotmatrixprinter.runtime.production.module.classpath">
+        <pathelement location="${dotmatrixprinter.output.dir}"/>
+        <path refid="library.org.imgscalr:imgscalr-lib:4.2.classpath"/>
+        <path refid="library.pc.classpath"/>
+        <path refid="library.nxt.classpath"/>
+    </path>
+
+    <path id="dotmatrixprinter.module.classpath">
+        <path refid="${module.jdk.classpath.dotmatrixprinter}"/>
+        <pathelement location="${dotmatrixprinter.output.dir}"/>
+        <path refid="library.org.imgscalr:imgscalr-lib:4.2.classpath"/>
+        <path refid="library.pc.classpath"/>
+        <path refid="library.nxt.classpath"/>
+    </path>
+
+    <path id="dotmatrixprinter.runtime.module.classpath">
+        <pathelement location="${dotmatrixprinter.testoutput.dir}"/>
+        <pathelement location="${dotmatrixprinter.output.dir}"/>
+        <path refid="library.org.imgscalr:imgscalr-lib:4.2.classpath"/>
+        <path refid="library.pc.classpath"/>
+        <path refid="library.nxt.classpath"/>
+    </path>
+
+
+    <patternset id="excluded.from.module.dotmatrixprinter">
+        <patternset refid="ignored.files"/>
+    </patternset>
+
+    <patternset id="excluded.from.compilation.dotmatrixprinter">
+        <patternset refid="excluded.from.module.dotmatrixprinter"/>
+    </patternset>
+
+    <path id="dotmatrixprinter.module.sourcepath">
+        <dirset dir="${module.dotmatrixprinter.basedir}">
+            <include name="src"/>
+        </dirset>
+    </path>
+
+
+    <target name="compile.module.dotmatrixprinter"
+            depends="compile.module.dotmatrixprinter.production,compile.module.dotmatrixprinter.tests"
+            description="Compile module DotMatrixPrinter"/>
+
+    <target name="compile.module.dotmatrixprinter.production" depends="register.custom.compilers"
+            description="Compile module DotMatrixPrinter; production classes">
+        <mkdir dir="${dotmatrixprinter.output.dir}"/>
+        <javac2 destdir="${dotmatrixprinter.output.dir}" debug="${compiler.debug}"
+                nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true"
+                executable="${module.jdk.bin.dotmatrixprinter}/javac">
+            <compilerarg line="${compiler.args.dotmatrixprinter}"/>
+            <bootclasspath refid="dotmatrixprinter.module.bootclasspath"/>
+            <classpath refid="dotmatrixprinter.module.production.classpath"/>
+            <src refid="dotmatrixprinter.module.sourcepath"/>
+            <patternset refid="excluded.from.compilation.dotmatrixprinter"/>
+        </javac2>
+
+        <copy todir="${dotmatrixprinter.output.dir}">
+            <fileset dir="${module.dotmatrixprinter.basedir}/src">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile.module.dotmatrixprinter.tests"
+            depends="register.custom.compilers,compile.module.dotmatrixprinter.production"
+            description="compile module DotMatrixPrinter; test classes" unless="skip.tests"/>
+
+    <target name="clean.module.dotmatrixprinter" description="cleanup module">
+        <delete dir="${dotmatrixprinter.output.dir}"/>
+        <delete dir="${dotmatrixprinter.testoutput.dir}"/>
+    </target>
+</project>

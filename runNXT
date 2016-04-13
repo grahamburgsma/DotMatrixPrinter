@@ -1,0 +1,3 @@
+nxjc src/DotPrinterNXT.java -d out
+nxjlink -o DotPrinterNXT.nxj DotPrinterNXT -classpath out
+nxjupload -r DotPrinterNXT.nxj

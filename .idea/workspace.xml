@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffc7bdc-af63-42e4-9cd5-74e1378907e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DotPrinterNXT.nxj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/CannyEdgeDetector.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/DotPrinterNXT.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/DotPrinterPC.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/ImageProcessor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/DotPrinterNXT.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/DotPrinterPC.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CannyEdgeDetector.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DotPrinterPC$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DotPrinterPC.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ImageProcessor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/nxt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/pc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dotmatrixprinter.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dotmatrixprinter.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module_dotmatrixprinter.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runNXT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runPC" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_imgscalr_imgscalr_lib_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/imgscalr-lib-4.2.jar" afterPath="" />
+    <list default="true" id="1ffc7bdc-af63-42e4-9cd5-74e1378907e3" name="Default" comment="Run scripts working">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DotPrinterNXT.nxj" afterPath="$PROJECT_DIR$/DotPrinterNXT.nxj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/parrotPrint.jpg" afterPath="$PROJECT_DIR$/images/parrotPrint.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DotMatrixPrinter/CannyEdgeDetector.class" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/CannyEdgeDetector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DotMatrixPrinter/ImageProcessor.class" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/ImageProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DotPrinterNXT.class" afterPath="$PROJECT_DIR$/out/DotPrinterNXT.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DotPrinterPC.class" afterPath="$PROJECT_DIR$/out/DotPrinterPC.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ImageProcessor.class" afterPath="$PROJECT_DIR$/out/ImageProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DotMatrixPrinter.iml" afterPath="$PROJECT_DIR$/DotMatrixPrinter.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DotPrinterNXT.java" afterPath="$PROJECT_DIR$/src/DotPrinterNXT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DotPrinterPC.java" afterPath="$PROJECT_DIR$/src/DotPrinterPC.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessor.java" afterPath="$PROJECT_DIR$/src/ImageProcessor.java" />
     </list>
     <ignored path="DotMatrixPrinter.iws" />
@@ -57,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/DotPrinterNXT.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+              <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -67,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/src/DotPrinterPC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -76,8 +54,18 @@
       <file leaf-file-name="ImageProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60777956">
-              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.5864662">
+              <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CannyEdgeDetector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CannyEdgeDetector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -101,10 +89,10 @@
         <option value="$PROJECT_DIR$/src/NXTConnector.java" />
         <option value="$PROJECT_DIR$/src/NXTInfo.java" />
         <option value="$PROJECT_DIR$/matrix.txt" />
-        <option value="$PROJECT_DIR$/src/DotPrinterNXT.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/libraries/pc.xml" />
         <option value="$PROJECT_DIR$/src/DotPrinterPC.java" />
+        <option value="$PROJECT_DIR$/src/DotPrinterNXT.java" />
         <option value="$PROJECT_DIR$/src/ImageProcessor.java" />
       </list>
     </option>
@@ -152,10 +140,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="DotMatrixPrinter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -578,7 +562,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460492452348</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Run scripts working">
+      <created>1460564717370</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1460564717370</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -592,8 +582,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23425414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2872928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23425414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2872928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -622,14 +612,21 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Changed some values to give better printing results" />
     <MESSAGE value="Added motor functionality and run file" />
     <MESSAGE value="Threaded setup" />
     <MESSAGE value="Things?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Things?" />
+    <MESSAGE value="Run scripts working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run scripts working" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -753,10 +750,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CannyEdgeDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DotPrinterNXT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -764,7 +769,7 @@
     <entry file="file://$PROJECT_DIR$/src/DotPrinterPC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -774,10 +779,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/matrix.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49624062">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ImageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60777956">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.5864662">
+          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
           <folding />
         </state>
       </provider>

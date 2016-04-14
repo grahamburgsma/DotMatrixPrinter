@@ -4,8 +4,6 @@ import lejos.nxt.comm.USBConnection;
 import lejos.util.Delay;
 
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
 import java.io.IOException;
 
 /**
@@ -16,9 +14,13 @@ import java.io.IOException;
 public class DotPrinterNXT {
 
     private int[][] printMatrix;
+    private int penRotation;
 
     public DotPrinterNXT() {
         LCD.drawString("Dot Matrix Printer", 0, 0);
+
+        resetPen();
+        setupPenHeight();
 
         try {
             readPrintMatrix();
@@ -52,27 +54,6 @@ public class DotPrinterNXT {
         conn.close();
     }
 
-    private void connectToPCExample() throws IOException {
-        LCD.drawString("waiting", 0, 0);
-        USBConnection conn = USB.waitForConnection();
-        DataOutputStream dOut = conn.openDataOutputStream();
-        DataInputStream dIn = conn.openDataInputStream();
-
-        while (true) {
-            int b;
-            try {
-                b = dIn.readInt();
-            } catch (EOFException e) {
-                break;
-            }
-            dOut.writeInt(-b);
-            dOut.flush();
-            LCD.drawInt(b, 8, 0, 1);
-        }
-        dOut.close();
-        dIn.close();
-        conn.close();
-    }
 
     private void setup() {
         Motor.C.setSpeed(500);
@@ -93,6 +74,19 @@ public class DotPrinterNXT {
         Motor.B.resetTachoCount();
     }
 
+    private void setupPenHeight() {
+        Motor.C.setSpeed(50);
+        TouchSensor touch = new TouchSensor(SensorPort.S1);
+
+        while (!touch.isPressed()) {
+            Motor.C.backward();
+            Delay.msDelay(100);
+        }
+        Motor.C.stop();
+        penRotation = Motor.C.getTachoCount();
+        Motor.C.rotateTo(0, false);
+    }
+
     private void resetPen() {
         Motor.C.setStallThreshold(50, 300);
         Motor.C.setSpeed(50);
@@ -102,6 +96,7 @@ public class DotPrinterNXT {
             Delay.msDelay(100);
         }
         Motor.C.stop();
+        Motor.C.resetTachoCount();
     }
 
     private void printMatrix() {
@@ -123,13 +118,10 @@ public class DotPrinterNXT {
     private void drawDot() {
         Motor.C.setSpeed(300);
 
-        Motor.C.backward();
-        Delay.msDelay(230);
-        Motor.C.stop();
+        Motor.C.rotateTo(penRotation);
         Delay.msDelay(100);
-        Motor.C.forward();
+        Motor.C.rotateTo(0);
         Delay.msDelay(230);
-        Motor.C.stop();
     }
 
     private void incrementPaperFeed() {

@@ -14,11 +14,12 @@ import java.io.IOException;
 
 public class ImageProcessor {
 
-    private static final int MAX_PRINT_WIDTH = 50;
+    private static final int MAX_PRINT_WIDTH = 200;
     private static final int PRINT_THESHOLD = 5;
     private BufferedImage originalImage, edgeImage;
     private String imageName;
     private int[][] printMatrix;
+
 
     public ImageProcessor(String imageName) {
         this.imageName = imageName;
@@ -32,6 +33,8 @@ public class ImageProcessor {
 
     public void cannyEdgeDetector() {
         CannyEdgeDetector cannyEdgeDetector = new CannyEdgeDetector();
+        cannyEdgeDetector.setLowThreshold(0.5f);
+        cannyEdgeDetector.setHighThreshold(1f);
         cannyEdgeDetector.setSourceImage(originalImage);
         cannyEdgeDetector.process();
 
@@ -39,23 +42,56 @@ public class ImageProcessor {
     }
 
     public int[][] imageToMatrix() {
-        Image image = edgeImage.getScaledInstance(MAX_PRINT_WIDTH, 37, Image.SCALE_AREA_AVERAGING);
+        int height = edgeImage.getHeight() / (edgeImage.getWidth() / MAX_PRINT_WIDTH);
 
-        BufferedImage resizedImage = toBufferedImage(image);
+        Image imageEdge = edgeImage.getScaledInstance(MAX_PRINT_WIDTH, height, Image.SCALE_AREA_AVERAGING);
+        Image imageOriginal = originalImage.getScaledInstance(MAX_PRINT_WIDTH, height, Image.SCALE_AREA_AVERAGING);
+
+        BufferedImage resizedImage = toBufferedImage(imageEdge);
+        BufferedImage resizedImageOriginal = toBufferedImage(imageOriginal);
 
         int[][] imageMatrix = new int[resizedImage.getHeight()][resizedImage.getWidth()];
 
         for (int y = 0; y < resizedImage.getHeight(); y++) {
             for (int x = 0; x < resizedImage.getWidth(); x++) {
-                Color color = new Color(resizedImage.getRGB(x, y));
-                imageMatrix[y][x] = color.getRed() > PRINT_THESHOLD ? 1 : 0;
+                if (getRed(resizedImage.getRGB(x, y)) + getGreen(resizedImage.getRGB(x, y)) + getBlue(resizedImage.getRGB(x, y)) > PRINT_THESHOLD) {
+                    int maxKey = 0, maxValue = 0;
+
+                    if (getRed(resizedImageOriginal.getRGB(x, y)) > maxValue) {
+                        maxKey = 1;
+                        maxValue = getRed(resizedImageOriginal.getRGB(x, y));
+                    }
+                    if (getGreen(resizedImageOriginal.getRGB(x, y)) > maxValue) {
+                        maxKey = 2;
+                        maxValue = getGreen(resizedImageOriginal.getRGB(x, y));
+                    }
+                    if (getBlue(resizedImageOriginal.getRGB(x, y)) > maxValue) {
+                        maxKey = 3;
+                    }
+                    System.out.println(maxKey);
+                    imageMatrix[y][x] = maxKey;
+                } else {
+                    imageMatrix[y][x] = 0;
+                }
             }
         }
 
-        displayImage(resizedImage);
+        displayImage(resizedImageOriginal);
 
         printMatrix = imageMatrix;
         return imageMatrix;
+    }
+
+    private int getRed(int rgb) {
+        return (rgb >> 16) & 0xFF;
+    }
+
+    private int getGreen(int rgb) {
+        return (rgb >> 8) & 0xFF;
+    }
+
+    private int getBlue(int rgb) {
+        return rgb & 0xFF;
     }
 
     private BufferedImage toBufferedImage(Image img) {

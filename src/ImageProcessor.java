@@ -14,15 +14,16 @@ import java.io.IOException;
 
 public class ImageProcessor {
 
-    private static final int MAX_PRINT_WIDTH = 200;
-    private static final int PRINT_THESHOLD = 5;
+    public static final int[] palette = {Color.white.getRGB(), Color.red.getRGB(), Color.green.getRGB(), Color.blue.getRGB(), Color.black.getRGB()};
+    private int MAX_PRINT_WIDTH = 5;
     private BufferedImage originalImage, edgeImage;
     private String imageName;
     private int[][] printMatrix;
 
-
     public ImageProcessor(String imageName) {
         this.imageName = imageName;
+
+        MAX_PRINT_WIDTH = (Globals.MAX_SLIDER_DISTANCE / Globals.PRINT_X_SPACING) - (Globals.SLIDER_START_DISTANCE / Globals.PRINT_X_SPACING);
 
         try {
             originalImage = ImageIO.read(new File("images/" + imageName));
@@ -54,25 +55,24 @@ public class ImageProcessor {
 
         for (int y = 0; y < resizedImage.getHeight(); y++) {
             for (int x = 0; x < resizedImage.getWidth(); x++) {
-                if (getRed(resizedImage.getRGB(x, y)) + getGreen(resizedImage.getRGB(x, y)) + getBlue(resizedImage.getRGB(x, y)) > PRINT_THESHOLD) {
-                    int maxKey = 0, maxValue = 0;
+//                if (getRed(resizedImage.getRGB(x, y)) + getGreen(resizedImage.getRGB(x, y)) + getBlue(resizedImage.getRGB(x, y)) > 0) {
+                int minDistance = Integer.MAX_VALUE;
+                int closestColour = 0;
 
-                    if (getRed(resizedImageOriginal.getRGB(x, y)) > maxValue) {
-                        maxKey = 1;
-                        maxValue = getRed(resizedImageOriginal.getRGB(x, y));
+                for (int i = 0; i < palette.length; i++) {
+                    int distance = getDistance(resizedImageOriginal.getRGB(x, y), palette[i]);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestColour = i;
                     }
-                    if (getGreen(resizedImageOriginal.getRGB(x, y)) > maxValue) {
-                        maxKey = 2;
-                        maxValue = getGreen(resizedImageOriginal.getRGB(x, y));
                     }
-                    if (getBlue(resizedImageOriginal.getRGB(x, y)) > maxValue) {
-                        maxKey = 3;
-                    }
-                    System.out.println(maxKey);
-                    imageMatrix[y][x] = maxKey;
-                } else {
+                if (closestColour == 1 || closestColour == 2 || closestColour == 3)
                     imageMatrix[y][x] = 0;
-                }
+                else
+                    imageMatrix[y][x] = closestColour;
+//                } else {
+//                    imageMatrix[y][x] = 0;
+//                }
             }
         }
 
@@ -80,6 +80,10 @@ public class ImageProcessor {
 
         printMatrix = imageMatrix;
         return imageMatrix;
+    }
+
+    private int getDistance(int color1, int color2) {
+        return ((int) (Math.pow(getRed(color2) - getRed(color1), 2) + Math.pow(getGreen(color2) - getGreen(color1), 2) + Math.pow(getBlue(color2) - getBlue(color1), 2)));
     }
 
     private int getRed(int rgb) {

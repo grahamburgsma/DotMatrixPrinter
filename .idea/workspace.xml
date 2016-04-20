@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffc7bdc-af63-42e4-9cd5-74e1378907e3" name="Default" comment="Matrix outputs RGB">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Globals.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DotMatrixPrinter/DotPrinterNXT.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DotPrinterNXT.nxj" afterPath="$PROJECT_DIR$/DotPrinterNXT.nxj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/parrotPrint.jpg" afterPath="$PROJECT_DIR$/images/parrotPrint.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DotPrinterNXT.class" afterPath="$PROJECT_DIR$/out/DotPrinterNXT.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DotPrinterPC.class" afterPath="$PROJECT_DIR$/out/DotPrinterPC.class" />
+    <list default="true" id="1ffc7bdc-af63-42e4-9cd5-74e1378907e3" name="Default" comment="Most up to date. Sends image line by line">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ImageProcessor.class" afterPath="$PROJECT_DIR$/out/ImageProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DotMatrixPrinter/CannyEdgeDetector.class" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/CannyEdgeDetector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DotMatrixPrinter/DotPrinterPC.class" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/DotPrinterPC.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DotMatrixPrinter/ImageProcessor.class" afterPath="$PROJECT_DIR$/out/production/DotMatrixPrinter/ImageProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runNXT" afterPath="$PROJECT_DIR$/runNXT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runPC" afterPath="$PROJECT_DIR$/runPC" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DotPrinterNXT.java" afterPath="$PROJECT_DIR$/src/DotPrinterNXT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DotPrinterPC.java" afterPath="$PROJECT_DIR$/src/DotPrinterPC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessor.java" afterPath="$PROJECT_DIR$/src/ImageProcessor.java" />
     </list>
     <ignored path="DotMatrixPrinter.iws" />
@@ -39,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DotPrinterNXT.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DotPrinterNXT.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DotPrinterNXT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3376206">
-              <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -53,17 +43,17 @@
         <entry file="file://$PROJECT_DIR$/src/DotPrinterPC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Globals.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Globals.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Globals.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.24115756">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -72,8 +62,8 @@
       <file leaf-file-name="ImageProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ImageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.296296">
-              <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+            <state vertical-scroll-proportion="-6.6666665">
+              <caret line="57" column="135" selection-start-line="57" selection-start-column="135" selection-end-line="57" selection-end-column="135" />
               <folding />
             </state>
           </provider>
@@ -106,11 +96,11 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/libraries/pc.xml" />
         <option value="$PROJECT_DIR$/matrix.txt" />
-        <option value="$PROJECT_DIR$/src/Globals.java" />
         <option value="$PROJECT_DIR$/src/SoundSample.java" />
         <option value="$PROJECT_DIR$/src/DotPrinterPC.java" />
-        <option value="$PROJECT_DIR$/src/ImageProcessor.java" />
         <option value="$PROJECT_DIR$/src/DotPrinterNXT.java" />
+        <option value="$PROJECT_DIR$/src/ImageProcessor.java" />
+        <option value="$PROJECT_DIR$/src/Globals.java" />
       </list>
     </option>
   </component>
@@ -591,7 +581,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460602548531</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Most up to date. Sends image line by line">
+      <created>1461088587360</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1461088587360</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -642,7 +638,8 @@
     <MESSAGE value="Things?" />
     <MESSAGE value="Run scripts working" />
     <MESSAGE value="Matrix outputs RGB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix outputs RGB" />
+    <MESSAGE value="Most up to date. Sends image line by line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Most up to date. Sends image line by line" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -845,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/test.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/testPrint.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/test2Print.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -870,22 +857,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/test3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/test3Print.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images/test2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/test4.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -898,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Globals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/leJOS_NXJ/lib/pc/pccomm-src.zip!/lejos/nxt/Sound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7980502">
@@ -914,34 +883,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DotPrinterNXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/src.zip!/java/awt/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0321543">
+          <caret line="183" column="28" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/testPrint.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DotPrinterPC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test4Print.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665">
+          <caret line="57" column="135" selection-start-line="57" selection-start-column="135" selection-end-line="57" selection-end-column="135" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matrix.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.096463025">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state vertical-scroll-proportion="-0.2652733">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImageProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/Globals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.296296">
-          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DotPrinterNXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3376206">
-          <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.24115756">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding />
         </state>
       </provider>

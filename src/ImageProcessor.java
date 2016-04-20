@@ -55,24 +55,21 @@ public class ImageProcessor {
 
         for (int y = 0; y < resizedImage.getHeight(); y++) {
             for (int x = 0; x < resizedImage.getWidth(); x++) {
-//                if (getRed(resizedImage.getRGB(x, y)) + getGreen(resizedImage.getRGB(x, y)) + getBlue(resizedImage.getRGB(x, y)) > 0) {
-                int minDistance = Integer.MAX_VALUE;
-                int closestColour = 0;
+                if (getRed(resizedImage.getRGB(x, y)) + getGreen(resizedImage.getRGB(x, y)) + getBlue(resizedImage.getRGB(x, y)) > Globals.PRINT_THRESHOLD) {
+                    int minDistance = Integer.MAX_VALUE;
+                    int closestColour = 0;
 
-                for (int i = 0; i < palette.length; i++) {
-                    int distance = getDistance(resizedImageOriginal.getRGB(x, y), palette[i]);
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        closestColour = i;
+                    for (int i = 0; i < palette.length; i++) {
+                        int distance = getDistance(resizedImageOriginal.getRGB(x, y), palette[i]);
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            closestColour = i;
+                        }
                     }
-                    }
-                if (closestColour == 1 || closestColour == 2 || closestColour == 3)
-                    imageMatrix[y][x] = 0;
-                else
                     imageMatrix[y][x] = closestColour;
-//                } else {
-//                    imageMatrix[y][x] = 0;
-//                }
+                } else {
+                    imageMatrix[y][x] = 0;
+                }
             }
         }
 

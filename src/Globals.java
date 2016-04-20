@@ -8,4 +8,5 @@ public class Globals {
     public static final int MAX_SLIDER_DISTANCE = 1100;
     public static final int PRINT_X_SPACING = 20;
     public static final int paletteSize = 5;
+    public static final int PRINT_THRESHOLD = -1; //-1 ignores edge detection, good for superman
 }

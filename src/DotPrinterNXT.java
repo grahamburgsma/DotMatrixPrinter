@@ -22,7 +22,6 @@ public class DotPrinterNXT {
     private int colourIteration = 1;
     private int height;
     private int width;
-    private USBConnection conn;
     private DataInputStream inputStream;
     private DataOutputStream outputStream;
 
@@ -30,7 +29,7 @@ public class DotPrinterNXT {
         setup();
         changePen();
 
-        conn = USB.waitForConnection();
+        USBConnection conn = USB.waitForConnection();
         inputStream = conn.openDataInputStream();
         outputStream = conn.openDataOutputStream();
 
@@ -154,7 +153,7 @@ public class DotPrinterNXT {
                     drawDot();
                 }
             }
-            outputStream.writeInt(0); //Give ready symbol
+            outputStream.writeBoolean(true); //Give ready symbol
             outputStream.flush();
 
             resetSlider();

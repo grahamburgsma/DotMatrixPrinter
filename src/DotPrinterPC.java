@@ -21,7 +21,7 @@ public class DotPrinterPC {
 //                    {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3}};
 
     public DotPrinterPC() {
-        ImageProcessor imageProcessor = new ImageProcessor("test4.jpg");
+        ImageProcessor imageProcessor = new ImageProcessor("superman.jpg");
         imageProcessor.cannyEdgeDetector();
         printMatrix = imageProcessor.imageToMatrix();
         imageProcessor.saveMatrixToFile();
@@ -66,7 +66,7 @@ public class DotPrinterPC {
                 }
                 System.out.println("");
                 outputStream.flush();
-                inputStream.readInt();
+                inputStream.readBoolean();
             }
         }
         outputStream.close();

@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffc7bdc-af63-42e4-9cd5-74e1378907e3" name="Default" comment="Added sobel edge detection, seems to actually work better than canny">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/CannyEdgeDetector.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DotPrinterNXT.nxj" afterPath="$PROJECT_DIR$/DotPrinterNXT.nxj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DotPrinterPC.class" afterPath="$PROJECT_DIR$/out/DotPrinterPC.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/ImageProcessor.class" afterPath="$PROJECT_DIR$/out/ImageProcessor.class" />
+    <list default="true" id="1ffc7bdc-af63-42e4-9cd5-74e1378907e3" name="Default" comment="Removed canny. Added yellow">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Source Code.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DotPrinterNXT.class" afterPath="$PROJECT_DIR$/out/DotPrinterNXT.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runPC" afterPath="$PROJECT_DIR$/runPC" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DotPrinterNXT.java" afterPath="$PROJECT_DIR$/src/DotPrinterNXT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DotPrinterPC.java" afterPath="$PROJECT_DIR$/src/DotPrinterPC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Globals.java" afterPath="$PROJECT_DIR$/src/Globals.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessor.java" afterPath="$PROJECT_DIR$/src/ImageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SobelEdgeDetection.java" afterPath="$PROJECT_DIR$/src/SobelEdgeDetection.java" />
     </list>
     <ignored path="DotMatrixPrinter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +39,8 @@
       <file leaf-file-name="DotPrinterPC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DotPrinterPC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66810346">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.7112069">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -610,7 +602,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461951224181</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed canny. Added yellow">
+      <created>1461953264396</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1461953264396</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -664,7 +662,8 @@
     <MESSAGE value="Most up to date. Sends image line by line" />
     <MESSAGE value="Fixed bug" />
     <MESSAGE value="Added sobel edge detection, seems to actually work better than canny" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sobel edge detection, seems to actually work better than canny" />
+    <MESSAGE value="Removed canny. Added yellow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed canny. Added yellow" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1034,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DotPrinterPC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66810346">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.7112069">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

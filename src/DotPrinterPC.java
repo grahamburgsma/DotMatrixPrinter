@@ -12,17 +12,13 @@ import java.io.IOException;
 public class DotPrinterPC {
 
     private int[][] printMatrix;
-//            {{3, 2, 1, 3, 2, 1, 3, 2, 1, 3, 2, 1},
-//                    {0, 1, 0, 2, 0, 3, 0, 3, 0, 2, 0, 1},
-//                    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-//                    {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-//                    {3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3},
-//                    {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4},
-//                    {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3}};
 
     public DotPrinterPC() {
         ImageProcessor imageProcessor = new ImageProcessor("superman.jpg");
-        imageProcessor.cannyEdgeDetector();
+
+//        imageProcessor.cannyEdgeDetector();
+        imageProcessor.sobelEdgeDetector();
+
         printMatrix = imageProcessor.imageToMatrix();
         imageProcessor.saveMatrixToFile();
 

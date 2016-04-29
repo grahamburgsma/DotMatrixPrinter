@@ -40,6 +40,15 @@ public class ImageProcessor {
         cannyEdgeDetector.process();
 
         edgeImage = cannyEdgeDetector.getEdgesImage();
+
+        saveImage(edgeImage, "canny.jpg");
+    }
+
+    public void sobelEdgeDetector() {
+        SobelEdgeDetection sobelEdgeDetection = new SobelEdgeDetection(originalImage);
+        edgeImage = sobelEdgeDetection.process();
+
+        saveImage(edgeImage, "sobel.jpg");
     }
 
     public int[][] imageToMatrix() {
@@ -73,7 +82,7 @@ public class ImageProcessor {
             }
         }
 
-        displayImage(resizedImageOriginal);
+        saveImage(resizedImage, "scaledImage.jpg");
 
         printMatrix = imageMatrix;
         return imageMatrix;
@@ -132,8 +141,8 @@ public class ImageProcessor {
         }
     }
 
-    public void displayImage(BufferedImage image) {
-        File outputfile = new File("images/" + imageName.substring(0, imageName.length() - 4) + "Print.jpg");
+    public void saveImage(BufferedImage image, String fileName) {
+        File outputfile = new File("images/" + fileName);
         try {
             ImageIO.write(image, "png", outputfile);
         } catch (IOException e) {

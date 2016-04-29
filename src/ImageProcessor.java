@@ -14,15 +14,12 @@ import java.io.IOException;
 
 public class ImageProcessor {
 
-    public static final int[] palette = {Color.white.getRGB(), Color.red.getRGB(), Color.green.getRGB(), Color.blue.getRGB(), Color.black.getRGB()};
+    public static final int[] palette = {Color.white.getRGB(), Color.red.getRGB(), Color.green.getRGB(), Color.blue.getRGB(), Color.yellow.getRGB(), Color.black.getRGB()};
     private int MAX_PRINT_WIDTH = 5;
     private BufferedImage originalImage, edgeImage;
-    private String imageName;
     private int[][] printMatrix;
 
     public ImageProcessor(String imageName) {
-        this.imageName = imageName;
-
         MAX_PRINT_WIDTH = (Globals.MAX_SLIDER_DISTANCE / Globals.PRINT_X_SPACING) - (Globals.SLIDER_START_DISTANCE / Globals.PRINT_X_SPACING);
 
         try {
@@ -30,18 +27,6 @@ public class ImageProcessor {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void cannyEdgeDetector() {
-        CannyEdgeDetector cannyEdgeDetector = new CannyEdgeDetector();
-        cannyEdgeDetector.setLowThreshold(0.5f);
-        cannyEdgeDetector.setHighThreshold(1f);
-        cannyEdgeDetector.setSourceImage(originalImage);
-        cannyEdgeDetector.process();
-
-        edgeImage = cannyEdgeDetector.getEdgesImage();
-
-        saveImage(edgeImage, "canny.jpg");
     }
 
     public void sobelEdgeDetector() {
@@ -109,15 +94,12 @@ public class ImageProcessor {
             return (BufferedImage) img;
         }
 
-        // Create a buffered image with transparency
         BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
 
-        // Draw the image on to the buffered image
         Graphics2D bGr = bimage.createGraphics();
         bGr.drawImage(img, 0, 0, null);
         bGr.dispose();
 
-        // Return the buffered image
         return bimage;
     }
 

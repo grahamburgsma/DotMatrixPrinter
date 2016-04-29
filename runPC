@@ -1,2 +1,2 @@
-nxjpcc src/DotPrinterPC.java src/ImageProcessor.java src/Globals.java src/CannyEdgeDetector.java src/SobelEdgeDetection.java -d out -classpath /Users/grahamburgsma/Library/leJOS_NXJ/lib/pc/pccomm.jar
+nxjpcc src/DotPrinterPC.java src/ImageProcessor.java src/Globals.java src/SobelEdgeDetection.java -d out -classpath /Users/grahamburgsma/Library/leJOS_NXJ/lib/pc/pccomm.jar
 nxjpc -classpath out DotPrinterPC

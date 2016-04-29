@@ -59,12 +59,4 @@ public class SobelEdgeDetection {
     private int getRed(int rgb) {
         return (rgb >> 16) & 0xFF;
     }
-
-    private int getGreen(int rgb) {
-        return (rgb >> 8) & 0xFF;
-    }
-
-    private int getBlue(int rgb) {
-        return rgb & 0xFF;
-    }
 }

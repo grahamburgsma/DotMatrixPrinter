@@ -15,8 +15,6 @@ public class DotPrinterPC {
 
     public DotPrinterPC() {
         ImageProcessor imageProcessor = new ImageProcessor("superman.jpg");
-
-//        imageProcessor.cannyEdgeDetector();
         imageProcessor.sobelEdgeDetector();
 
         printMatrix = imageProcessor.imageToMatrix();

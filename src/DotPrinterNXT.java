@@ -78,6 +78,8 @@ public class DotPrinterNXT {
             Sound.playSample(new File("robotblue.wav"));
             LCD.drawString("Insert BLUE", 0, 0);
         } else if (colourIteration == 4) {
+            LCD.drawString("Insert YELLOW", 0, 0);
+        } else if (colourIteration == 5) {
             Sound.playSample(new File("robotblack.wav"));
             LCD.drawString("Insert BLACK", 0, 0);
         }
